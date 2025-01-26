@@ -18,7 +18,7 @@ function App() {
 
   const handleStart = () => {
     setStart(true);
-    setPaused(false); // Reset paused state when starting
+    setPaused(false); 
     intervalRef.current = setInterval(() => {
       setSec((prevSec) => {
         if (prevSec + 1 === 60) {
