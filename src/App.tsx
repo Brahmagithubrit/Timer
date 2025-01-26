@@ -81,31 +81,46 @@ function App() {
         </Grid>
       ) : (
         <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "60vh",
-            backgroundColor: "#f5f5f5",
-            borderRadius: 2,
-            boxShadow: 3,
-            padding: 2,
-            textAlign: "center",
-          }}
-        >
-          <Typography
-            variant="h2"
-            component="div"
-            sx={{
-              fontSize: { xs: "3rem", sm: "5rem" },
-              fontWeight: "bold",
-              color: "#1976d2",
-            }}
-          >
-            {String(hour).padStart(2, "0")}:{String(minute).padStart(2, "0")}:
-            {String(sec).padStart(2, "0")}
-          </Typography>
-        </Box>
+  sx={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "60vh",
+    backgroundColor: "#f5f5f5",
+    borderRadius: 2,
+    boxShadow: 3,
+    padding: 2,
+    textAlign: "center",
+    flexDirection: "column",
+  }}
+>
+  <Typography
+    variant="body1"
+    sx={{
+      fontSize: { xs: "1rem", sm: "1.2rem" },
+      color: "#1976d2",
+      fontWeight: "bold",
+      marginBottom: 3,
+      fontStyle: "italic",
+      lineHeight: 1.5,
+    }}
+  >
+    Every hour you invest today brings you one step closer to the future you dream of—keep pushing, the effort will pay off.
+  </Typography>
+  <Typography
+    variant="h2"
+    component="div"
+    sx={{
+      fontSize: { xs: "3rem", sm: "5rem" },
+      fontWeight: "bold",
+      color: "#1976d2",
+    }}
+  >
+    {String(hour).padStart(2, "0")}:{String(minute).padStart(2, "0")}:
+    {String(sec).padStart(2, "0")}
+  </Typography>
+</Box>
+
       )}
     </Container>
   );
